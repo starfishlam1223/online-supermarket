@@ -1,0 +1,7 @@
+id,name,src
+0,飲品及酒類,./static/svg/wine.svg
+1,餅乾、零食及糖果,./static/svg/cookie.svg
+2,家居用品,./static/svg/house.svg
+3,新鮮食品,./static/svg/meat.svg
+4,早餐及麵包糕點,./static/svg/bread.svg
+5,乳製品、冷凍食品及雞蛋,./static/svg/egg.svg
