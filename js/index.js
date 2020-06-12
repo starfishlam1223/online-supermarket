@@ -5,7 +5,7 @@ var inMenuItem = false;
 var selectedCat = -1;
 
 $(document).ready(function () {
-  d3.csv("https://raw.githubusercontent.com/starfishlam1223/online-supermarket/master/static/csv/catorgories.csv").then(function (array) {
+  d3.csv("https://raw.githubusercontent.com/starfishlam1223/online-supermarket/master/static/csv/categories.csv").then(function (array) {
     array.forEach(function(item) {
       $(".menu > .list").append(`
         <li class="item" catId="` + item.id + `">
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $(".menu > .list li[catId=" + id + "] .icon img").css("filter", "invert(57%) sepia(15%) saturate(2279%) hue-rotate(168deg) brightness(103%) contrast(91%)");
         $(".menu > .list li[catId=" + id + "] .name").css("color", "#3fa7f3");
         $(".menu > .list li[catId=" + id + "] .arrow img").css("opacity", "1");
-        d3.csv("https://raw.githubusercontent.com/starfishlam1223/online-supermarket/master/static/csv/subCatorgories.csv").then(function (array) {
+        d3.csv("https://raw.githubusercontent.com/starfishlam1223/online-supermarket/master/static/csv/subCategories.csv").then(function (array) {
           $(".sub-menu > .list").empty();
           array.forEach(function(item) {
             if (item.catId === id) {
