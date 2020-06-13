@@ -1,0 +1,34 @@
+.subCatTitle {
+  width: 100%;
+}
+
+.subCatTitle p{
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin: 1rem 0 0 0;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items .item {
+  margin-top: 2rem;
+  flex: 0 0 calc(25% - 0.0625rem);
+  border-right: 0.0625rem solid #dfdfdf;
+  text-align: center;
+}
+
+.items .item img {
+  width: 80%;
+}
+
+.items .item .title {
+  margin: 1rem;
+  font-size: x-large;
+  font-weight: bolder;
+  color: #214099;
+}

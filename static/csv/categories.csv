@@ -1,4 +1,4 @@
-id,name,src
+﻿id,name,src
 0,飲品及酒類,./static/svg/wine.svg
 1,餅乾、零食及糖果,./static/svg/cookie.svg
 2,家居用品,./static/svg/house.svg
