@@ -93,4 +93,8 @@ $(document).ready(function () {
   $(".cart-btn .border").click(function () {
     window.location.replace("./payment.html");
   })
+
+  $(".logo").click(function () {
+    window.location.replace("./index.html");
+  })
 })

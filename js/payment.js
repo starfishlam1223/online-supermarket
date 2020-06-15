@@ -46,4 +46,10 @@ $(document).ready(function () {
 
     $(".page .content .title .numberOfItems").text(shoppingCart.length + "項商品");
   });
+
+  $(".info .pay").click(function () {
+    localStorage.setItem("cart", "[]");
+
+    window.location.replace("./complete.html");
+  })
 });

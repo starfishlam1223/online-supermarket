@@ -15,7 +15,7 @@ function updateCart(newItem) {
   cart.forEach(function (item) {
     if (item.id == newItem.id) {
       existItem = true;
-      item.quantity += newItem.quantity;
+      item.quantity = parseInt(item.quantity) + parseInt(newItem.quantity);
     }
   });
   if (!existItem) {
