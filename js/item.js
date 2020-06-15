@@ -44,9 +44,22 @@ $(document).ready(function () {
           $(".page .details .info .price").text("HK$" + parseFloat(item.price).toFixed(2));
 
           $(".page .details .info .confirm").click(function () {
-            console.log("clicked");
             let newItem = { id: item.id, quantity: $(".page .details .info .input input").val() };
             updateCart(newItem);
+
+            let popupId = $(".page .details .popups .popup").length
+            $(".page .details .popups").append(`
+            <span
+              class="popup"
+              popupId="` + popupId + `"
+            >
+              已將` + item.name + `×` + $(".page .details .info .input input").val() + `加入購物車
+            </span>
+            `);
+            let popupDiv = $(".page .details .popups .popup[popupId=" + popupId + "]");
+            popupDiv.addClass("show");
+
+            hidePopup(popupDiv);
           })
         }
       });
@@ -55,3 +68,9 @@ $(document).ready(function () {
     window.location.replace("./index.html");
   }
 });
+
+function hidePopup(popupDiv) {
+  setTimeout(function () {
+    popupDiv.removeClass("show");
+  }, 3000);
+}

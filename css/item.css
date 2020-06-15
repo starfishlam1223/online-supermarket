@@ -1,5 +1,5 @@
 .page .title {
-  width: 100%;
+  width: calc(100% - 2rem);
   margin-left: 2rem;
 }
 
@@ -24,7 +24,7 @@
 
 .page .details {
   display: flex;
-  flex-wrap: row;
+  flex-direction: row;
   margin-left: 2rem;
 }
 
@@ -61,6 +61,7 @@
   background-color: #7982c4;
   border-radius: 50%;
   border: solid 0.5rem #7982c4;
+  cursor: pointer;
 }
 
 .page .details .info .input .minus img {
@@ -77,6 +78,7 @@
   background-color: #7982c4;
   border-radius: 50%;
   border: solid 0.5rem #7982c4;
+  cursor: pointer;
 }
 
 .page .details .info .input .minus:hover {
@@ -134,8 +136,101 @@
   border-radius: 1rem;
   font-size: 1.5rem;
   margin-left: 1rem;
+  text-align: center;
+  cursor: pointer;
 }
 
-.page .details .info .confirm p{
+.page .details .info .confirm p {
   margin: calc(1rem + 0.125rem) 0 calc(1rem + 0.125rem) 0;
+}
+
+.page .details .popups .popup {
+  width: 40rem;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 20%;
+  left: calc(50% - 20rem);
+  opacity: 0;
+  -webkit-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+}
+
+.page .details .popups .show {
+  opacity: 0.75;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.75;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.75;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .page .details {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .page .details .image img {
+    width: 100%;
+    max-width: 25rem;
+    margin-left: calc(50% - 12.5rem);
+    margin-right: calc(50% - 12.5rem);
+  }
+
+  .page .details .info .price {
+    text-align: center;
+  }
+
+  .page .details .info .input {
+    margin: auto;
+  }
+
+  .page .details .info .input input  {
+    width: 100%;
+  }
+
+  .page .details .info .confirm {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
 }

@@ -17,6 +17,7 @@
   font-size: 2rem;
   margin: auto;
   padding: 1rem 0 1rem 0;
+  cursor: pointer;
 }
 
 .back p {

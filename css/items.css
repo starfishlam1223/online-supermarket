@@ -21,6 +21,8 @@
   /* fill: #dfdfdf; */
   filter: invert(94%) sepia(76%) saturate(135%) hue-rotate(295deg) brightness(110%) contrast(75%);
   visibility: hidden;
+  cursor: pointer;
+  z-index: -1;
 }
 
 .items .next {
@@ -30,6 +32,8 @@
   /* fill: #dfdfdf; */
   filter: invert(94%) sepia(76%) saturate(135%) hue-rotate(295deg) brightness(110%) contrast(75%);
   visibility: hidden;
+  cursor: pointer;
+  z-index: -1;
 }
 
 .items .grids {
@@ -43,6 +47,7 @@
   flex: 0 0 calc(25% - 0.0625rem);
   border-right: 0.0625rem solid #dfdfdf;
   text-align: center;
+  cursor: pointer;
 }
 
 .items .grids .item img {
@@ -54,4 +59,10 @@
   font-size: x-large;
   font-weight: bolder;
   color: #214099;
+}
+
+@media only screen and (max-width: 600px) {
+  .items .grids .item {
+    flex: 0 0 calc(50% - 0.0625rem);
+  }
 }

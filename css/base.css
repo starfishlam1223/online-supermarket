@@ -28,6 +28,7 @@ body {
   height: 1.25rem;
   /* fill: #ffffff; */
   filter: invert(100%) sepia(3%) saturate(11%) hue-rotate(348deg) brightness(102%) contrast(105%);
+  cursor: pointer;
 }
 
 .logo {
@@ -39,6 +40,7 @@ body {
 
 .logo img {
   height: 2.5rem;
+  cursor: pointer;
 }
 
 .cart-btn {
@@ -53,6 +55,7 @@ body {
   border-radius: 50%;
   align-items: center;
   padding: 0.625rem;
+  cursor: pointer;
 }
 
 .cart-btn .border::after {
@@ -103,6 +106,7 @@ body {
   margin: 0.5rem 1rem 0.5rem 1rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .menu>.list .icon {
@@ -179,6 +183,7 @@ body {
   margin: 0.5rem 1rem 0.5rem 2rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .sub-menu>.list .icon {
@@ -204,5 +209,20 @@ body {
 
 .page .content {
   max-width: 80rem;
+  width: 90vw;
   margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu>.list {
+    width: 45vw;
+  }
+
+  .sub-menu {
+    left: calc(45vw - 1rem);
+  }  
+
+  .sub-menu>.list {
+    width: 45vw;
+  }
 }
