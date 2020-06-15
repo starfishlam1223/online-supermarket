@@ -1,6 +1,5 @@
 var inMenuBtn = false;
 var inMenu = false;
-var inMenuItem = false;
 
 var selectedCat = -1;
 
@@ -22,13 +21,13 @@ $(document).ready(function () {
       `);
 
       $(".menu .list li").hover(function () {
-        $(".sub-menu .list").css("height", $(".menu > .list").height());
         let id = $(this).attr("catId");
         selectedCat = id;
         $(".menu > .list li[catId=" + id + "] .icon img").css("filter", "invert(57%) sepia(15%) saturate(2279%) hue-rotate(168deg) brightness(103%) contrast(91%)");
         $(".menu > .list li[catId=" + id + "] .name").css("color", "#3fa7f3");
         $(".menu > .list li[catId=" + id + "] .arrow img").css("opacity", "1");
         d3.csv("./static/csv/subCategories.csv").then(function (array) {
+          $(".sub-menu > .list").css("height", $(".menu > .list").height());
           $(".sub-menu > .list").empty();
           array.forEach(function (item) {
             if (item.catId === id) {
@@ -73,7 +72,7 @@ $(document).ready(function () {
     inMenuBtn = true;
   }, function () {
     inMenuBtn = false;
-    if (!inMenuBtn && !inMenuBtn) {
+    if (!inMenuBtn && !inMenu) {
       $(".menu").hide();
       $(".sub-menu").hide();
     }
@@ -84,7 +83,7 @@ $(document).ready(function () {
     inMenu = true;
   }, function () {
     inMenu = false;
-    if (!inMenuBtn && !inMenuBtn) {
+    if (!inMenuBtn && !inMenu) {
       $(".menu").hide();
       $(".sub-menu").hide();
     }

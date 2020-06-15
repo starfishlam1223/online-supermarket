@@ -11,7 +11,7 @@
 
 .items {
   display: flex;
-  flex-wrap: row;
+  flex-direction: row;
 }
 
 .items .prev {
@@ -60,7 +60,29 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .subCatTitle p {
+    font-size: 7.5vw;
+  }
+
   .items .grids .item {
     flex: 0 0 calc(50% - 0.0625rem);
+  }
+
+  .items .grids .item .title {
+    font-size: 5vw;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .subCatTitle p {
+    font-size: 7.5vw;
+  }
+  
+  .items .grids .item {
+    flex: 0 0 calc(50% - 0.0625rem);
+  }
+
+  .items .grids .item .title {
+    font-size: 5vw;
   }
 }

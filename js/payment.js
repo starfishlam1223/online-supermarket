@@ -26,6 +26,7 @@ $(document).ready(function () {
         </div>
       </div>
       `);
+      $(".info .pay").attr("disabled", "disabled");
     } else {
       shoppingCart.forEach(function (item) {
         $(".page .content .items .list").append(`

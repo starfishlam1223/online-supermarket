@@ -48,7 +48,7 @@
 
 .page .details .info .input {
   display: flex;
-  flex-wrap: row;
+  flex-direction: row;
   border: 0.0625rem solid #f1f1f1;
   border-radius: 1rem;
   padding: 0.5rem;
@@ -83,24 +83,24 @@
 
 .page .details .info .input .minus:hover {
   background-color: #292d84;
-  border: solid 0.5rem #292d84;
+  border-color: #292d84;
 }
 
 .page .details .info .input .add:hover {
   background-color: #292d84;
-  border: solid 0.5rem #292d84;
+  border-color: #292d84;
 }
 
 .page .details .info .input .minus[disabled] {
   pointer-events: none;
   background-color: #d1d1d1;
-  border: solid 0.5rem #d1d1d1;
+  border-color: #d1d1d1;
 }
 
 .page .details .info .input .add[disabled] {
   pointer-events: none;
   background-color: #d1d1d1;
-  border: solid 0.5rem #d1d1d1;
+  border-color: #d1d1d1;
 }
 
 .page .details .info .input .add img {
@@ -203,34 +203,88 @@
 }
 
 @media only screen and (max-width: 800px) {
-
   .page .details {
     flex-direction: column;
     margin-left: 0;
   }
-
   .page .details .image img {
     width: 100%;
     max-width: 25rem;
     margin-left: calc(50% - 12.5rem);
     margin-right: calc(50% - 12.5rem);
   }
-
   .page .details .info .price {
     text-align: center;
   }
-
   .page .details .info .input {
     margin: auto;
   }
-
-  .page .details .info .input input  {
+  .page .details .info .input input {
     width: 100%;
   }
-
   .page .details .info .confirm {
     width: 100%;
     margin-left: 0;
     margin-top: 1rem;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .page .title .name {
+    font-size: 7.5vw;
+  }
+  .page .title .desc {
+    font-size: 7.5vw;
+  }
+  .page .details {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .page .details .image img {
+    width: 100%;
+    max-width: 25rem;
+    margin-left: calc(50% - 12.5rem);
+    margin-right: calc(50% - 12.5rem);
+  }
+  .page .details .info .price {
+    text-align: center;
+    font-size: 7.5vw;
+  }
+  .page .details .info .input {
+    margin: auto;
+  }
+  .page .details .info .input .minus {
+    border-width: 2vw;
+    width: 7.5vw;
+    height: 7.5vw;
+  }
+  .page .details .info .input .minus img {
+    width: 7.5vw;
+    height: 7.5vw;
+  }
+  .page .details .info .input .add {
+    border-width: 2vw;
+    width: 7.5vw;
+    height: 7.5vw;
+  }
+  .page .details .info .input .add img {
+    width: 7.5vw;
+    height: 7.5vw;
+  }
+  .page .details .info .input input {
+    width: 45vw;
+    height: 10vw;
+    font-size: 10vw;
+  }
+  .page .details .info .confirm {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .page .details .info .confirm p {
+    font-size: 7.5vw;
+  }
+  .page .details .popups .popup {
+    font-size: 5vw;
   }
 }

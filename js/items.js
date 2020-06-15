@@ -16,6 +16,22 @@ $(document).ready(function () {
       window.location.replace("./items.html?subCat=" + subCat + "&page=" + (parseInt(page) + 1));
     });
 
+    $(".menu-btn img").hover(function () {
+      $(".page .items .prev").css("z-index", "-1");
+      $(".page .items .next").css("z-index", "-1");
+    }, function () {
+      $(".page .items .prev").css("z-index", "0");
+      $(".page .items .next").css("z-index", "0");
+    })
+  
+    $(".menu").hover(function () {
+      $(".page .items .prev").css("z-index", "-1");
+      $(".page .items .next").css("z-index", "-1");
+    }, function () {
+      $(".page .items .prev").css("z-index", "0");
+      $(".page .items .next").css("z-index", "0");
+    });  
+
     d3.csv("./static/csv/subCategories.csv").then(function (array) {
       array.forEach(function (item) {
         if (item.id == subCat) {
