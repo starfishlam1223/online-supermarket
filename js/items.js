@@ -4,26 +4,22 @@ var page = 1;
 
 $(document).ready(function () {
   if (getParams.has('subCat')) {
-    subCat = getParams.get('subCat')
+    subCat = getParams.get('subCat');
     if (getParams.has('page')) {
-      page = getParams.get('page')
+      page = getParams.get('page');
     }
 
-    $(".page .items .prev").click(function() {
+    $(".page .items .prev").click(function () {
       window.location.replace("./items.html?subCat=" + subCat + "&page=" + (parseInt(page) - 1));
     });
-    $(".page .items .next").click(function() {
+    $(".page .items .next").click(function () {
       window.location.replace("./items.html?subCat=" + subCat + "&page=" + (parseInt(page) + 1));
     });
 
     d3.csv("./static/csv/subCategories.csv").then(function (array) {
       array.forEach(function (item) {
-        console.log(subCat);
-        console.log(item.id);
-
         if (item.id == subCat) {
           $(".page .subCatTitle p").text(item.name);
-          console.log(item.name);
         }
       });
     });
@@ -60,6 +56,10 @@ $(document).ready(function () {
             <div class="title">` + item.name + `</div>
           </div>
           `);
+
+          $(".page .items .grids .item[itemId=" + item.id + "]").click(function () {
+            window.location.replace("./item.html?item=" + item.id);
+          });
         }
       });
     });

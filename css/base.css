@@ -64,7 +64,7 @@ body {
   position: relative;
   top: calc(-2rem - 0.625rem);
   left: calc(2rem - 0.625rem);
-  content: '0';
+  content: attr(quantity);
   text-align: center;
   font-size: smaller;
 }
@@ -166,7 +166,7 @@ body {
   }
 }
 
-.sub-menu .list {
+.sub-menu>.list {
   list-style-type: none;
   width: 17.5rem;
   border-radius: 0 2rem 2rem 0;
@@ -175,24 +175,24 @@ body {
   box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.25);
 }
 
-.sub-menu .list .item {
+.sub-menu>.list .item {
   margin: 0.5rem 1rem 0.5rem 2rem;
   display: flex;
   align-items: center;
 }
 
-.sub-menu .list .icon {
+.sub-menu>.list .icon {
   width: 2rem;
   list-style-type: none;
   text-align: center;
   margin-right: 0.25rem;
 }
 
-.sub-menu .list .icon img {
+.sub-menu>.list .icon img {
   height: 1.5rem;
 }
 
-.sub-menu .list .name {
+.sub-menu>.list .name {
   color: #4a4a4a;
   width: 15rem;
 }

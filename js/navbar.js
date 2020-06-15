@@ -6,7 +6,7 @@ var selectedCat = -1;
 
 $(document).ready(function () {
   d3.csv("./static/csv/categories.csv").then(function (array) {
-    array.forEach(function(item) {
+    array.forEach(function (item) {
       $(".menu > .list").append(`
         <li class="item" catId="` + item.id + `">
           <div class="icon">
@@ -21,7 +21,7 @@ $(document).ready(function () {
         </li>
       `);
 
-      $(".menu .list li").hover(function() {
+      $(".menu .list li").hover(function () {
         $(".sub-menu .list").css("height", $(".menu > .list").height());
         let id = $(this).attr("catId");
         selectedCat = id;
@@ -30,7 +30,7 @@ $(document).ready(function () {
         $(".menu > .list li[catId=" + id + "] .arrow img").css("opacity", "1");
         d3.csv("./static/csv/subCategories.csv").then(function (array) {
           $(".sub-menu > .list").empty();
-          array.forEach(function(item) {
+          array.forEach(function (item) {
             if (item.catId === id) {
               $(".sub-menu > .list").append(`
                 <li class="item" catId="` + item.id + `">
@@ -43,22 +43,22 @@ $(document).ready(function () {
                 </li>
               `);
 
-              $(".sub-menu > .list > li[catId=" + item.id + "]").click(function() {
+              $(".sub-menu > .list > li[catId=" + item.id + "]").click(function () {
                 window.location.replace("./items.html?subCat=" + item.id);
               });
             }
           });
-          $(".sub-menu .list li").hover(function() {
+          $(".sub-menu .list li").hover(function () {
             let id = $(this).attr("catId");
             $(".sub-menu .list li[catId=" + id + "] .name").css("color", "#3fa7f3");
-          }, function() {
+          }, function () {
             let id = $(this).attr("catId");
             $(".sub-menu .list li[catId=" + id + "] .name").css("color", "#4a4a4a");
           })
-          
+
           $(".sub-menu").show();
         });
-      }, function() {
+      }, function () {
         let id = $(this).attr("catId");
         selectedCat = -1;
         $(".menu > .list li[catId=" + id + "] .icon img").css("filter", "invert(23%) sepia(37%) saturate(0%) hue-rotate(183deg) brightness(99%) contrast(84%)");
@@ -68,10 +68,10 @@ $(document).ready(function () {
     });
   });
 
-  $(".menu-btn img").hover(function() {
+  $(".menu-btn img").hover(function () {
     $(".menu").show();
     inMenuBtn = true;
-  }, function() {
+  }, function () {
     inMenuBtn = false;
     if (!inMenuBtn && !inMenuBtn) {
       $(".menu").hide();
@@ -79,14 +79,18 @@ $(document).ready(function () {
     }
   })
 
-  $(".menu").hover(function() {
+  $(".menu").hover(function () {
     $(".menu").show();
     inMenu = true;
-  }, function() {
+  }, function () {
     inMenu = false;
     if (!inMenuBtn && !inMenuBtn) {
       $(".menu").hide();
       $(".sub-menu").hide();
     }
+  })
+
+  $(".cart-btn .border").click(function () {
+    window.location.replace("./payment.html");
   })
 })

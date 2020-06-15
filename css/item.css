@@ -1,0 +1,141 @@
+.page .title {
+  width: 100%;
+  margin-left: 2rem;
+}
+
+.page .title {
+  margin-top: 3rem;
+}
+
+.page .title .name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0 0 0;
+  color: #444444;
+  display: inline-block;
+}
+
+.page .title .desc {
+  font-size: 3rem;
+  margin: 0 0 0 2rem;
+  color: #999999;
+  display: inline-block;
+}
+
+.page .details {
+  display: flex;
+  flex-wrap: row;
+  margin-left: 2rem;
+}
+
+.page .details .image {
+  flex: 0 0 30%;
+}
+
+.page .details .info {
+  flex: 0 0 70%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.page .details .info .price {
+  font-size: 3.5rem;
+  margin: 2rem 0 2rem 0;
+  flex: 0 0 100%;
+  color: #f01b18;
+}
+
+.page .details .info .input {
+  display: flex;
+  flex-wrap: row;
+  border: 0.0625rem solid #f1f1f1;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.page .details .info .input .minus {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  background-color: #7982c4;
+  border-radius: 50%;
+  border: solid 0.5rem #7982c4;
+}
+
+.page .details .info .input .minus img {
+  width: 2rem;
+  height: 2rem;
+  /* fill: #ffffff; */
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(312deg) brightness(103%) contrast(103%);
+}
+
+.page .details .info .input .add {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  background-color: #7982c4;
+  border-radius: 50%;
+  border: solid 0.5rem #7982c4;
+}
+
+.page .details .info .input .minus:hover {
+  background-color: #292d84;
+  border: solid 0.5rem #292d84;
+}
+
+.page .details .info .input .add:hover {
+  background-color: #292d84;
+  border: solid 0.5rem #292d84;
+}
+
+.page .details .info .input .minus[disabled] {
+  pointer-events: none;
+  background-color: #d1d1d1;
+  border: solid 0.5rem #d1d1d1;
+}
+
+.page .details .info .input .add[disabled] {
+  pointer-events: none;
+  background-color: #d1d1d1;
+  border: solid 0.5rem #d1d1d1;
+}
+
+.page .details .info .input .add img {
+  width: 2rem;
+  height: 2rem;
+  /* fill: #ffffff; */
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(312deg) brightness(103%) contrast(103%);
+}
+
+.page .details .info .input input {
+  text-align: center;
+  border: none;
+  font-size: 2rem;
+  width: 5rem;
+  height: 3rem;
+  margin: 0 1rem 0 1rem;
+}
+
+.page .details .info .input input::-webkit-outer-spin-button, .page .details .info input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.page .details .info .input input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+.page .details .info .confirm {
+  background-color: #292d84;
+  color: #ffffff;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.page .details .info .confirm p{
+  margin: calc(1rem + 0.125rem) 0 calc(1rem + 0.125rem) 0;
+}

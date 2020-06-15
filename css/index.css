@@ -1,0 +1,57 @@
+.subCatTitle {
+  width: 100%;
+}
+
+.subCatTitle p{
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin: 1rem 0 0 0;
+}
+
+.items {
+  display: flex;
+  flex-wrap: row;
+}
+
+.items .prev {
+  flex: 0 0 10%;
+  background:url(../static/svg/left-arrow.svg) center center no-repeat;
+  background-size: 100%;
+  /* fill: #dfdfdf; */
+  filter: invert(94%) sepia(76%) saturate(135%) hue-rotate(295deg) brightness(110%) contrast(75%);
+  visibility: hidden;
+}
+
+.items .next {
+  flex: 0 0 10%;
+  background:url(../static/svg/right-arrow.svg) center center no-repeat;
+  background-size: 100%;
+  /* fill: #dfdfdf; */
+  filter: invert(94%) sepia(76%) saturate(135%) hue-rotate(295deg) brightness(110%) contrast(75%);
+  visibility: hidden;
+}
+
+.items .grids {
+  flex: 0 0 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items .grids .item {
+  margin-top: 2rem;
+  flex: 0 0 calc(25% - 0.0625rem);
+  border-right: 0.0625rem solid #dfdfdf;
+  text-align: center;
+}
+
+.items .grids .item img {
+  width: 80%;
+}
+
+.items .grids .item .title {
+  margin: 1rem;
+  font-size: x-large;
+  font-weight: bolder;
+  color: #214099;
+}
