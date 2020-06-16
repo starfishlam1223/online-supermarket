@@ -3,6 +3,22 @@ var itemId;
 var quantity;
 
 $(document).ready(function () {
+  $(".page .left").click(function () {
+    window.history.back();
+  });
+
+  $(".menu-btn img").hover(function () {
+    $(".page .left").css("z-index", "-1");
+  }, function () {
+    $(".page .left").css("z-index", "0");
+  })
+
+  $(".menu").hover(function () {
+    $(".page .left").css("z-index", "-1");
+  }, function () {
+    $(".page .left").css("z-index", "0");
+  });  
+
   quantity = $(".page .details .info .input input").val();
 
   $(".page .details .info .input .minus").click(function () {

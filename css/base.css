@@ -95,7 +95,7 @@ body {
 
 .menu>.list {
   list-style-type: none;
-  width: 17.5rem;
+  width: 30rem;
   border-radius: 1rem;
   background-color: #f1f1f1;
   padding: 0.5rem 0 0.5rem 0;
@@ -110,25 +110,26 @@ body {
 }
 
 .menu>.list .icon {
-  width: 2rem;
+  width: 3.5rem;
   list-style-type: none;
   text-align: center;
   margin-right: 0.25rem;
 }
 
 .menu>.list .icon img {
-  height: 1.5rem;
+  height: 2.5rem;
   /* fill: #4a4a4a; */
   filter: invert(23%) sepia(37%) saturate(0%) hue-rotate(183deg) brightness(99%) contrast(84%);
 }
 
 .menu>.list .name {
   color: #4a4a4a;
-  width: 15rem;
+  width: 25rem;
+  font-size: 1.75rem;
 }
 
 .menu>.list .arrow img {
-  height: 1rem;
+  height: 2rem;
   opacity: 0;
   /* fill: #3fa7f3; */
   filter: invert(57%) sepia(15%) saturate(2279%) hue-rotate(168deg) brightness(103%) contrast(91%);
@@ -137,7 +138,7 @@ body {
 .sub-menu {
   position: absolute;
   top: 0;
-  left: 16.5rem;
+  left: 29.5rem;
   z-index: -1;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
@@ -172,7 +173,7 @@ body {
 
 .sub-menu>.list {
   list-style-type: none;
-  width: 17.5rem;
+  width: 25rem;
   border-radius: 0 2rem 2rem 0;
   background-color: #ffffff;
   padding: 0.5rem 0 0.5rem 0;
@@ -187,19 +188,20 @@ body {
 }
 
 .sub-menu>.list .icon {
-  width: 2rem;
+  width: 3.5rem;
   list-style-type: none;
   text-align: center;
   margin-right: 0.25rem;
 }
 
 .sub-menu>.list .icon img {
-  height: 1.5rem;
+  height: 2rem;
 }
 
 .sub-menu>.list .name {
   color: #4a4a4a;
-  width: 15rem;
+  width: 20rem;
+  font-size: 1.75rem;
 }
 
 .page {

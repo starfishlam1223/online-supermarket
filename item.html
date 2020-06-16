@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>百佳網上超級市場</title>
+  <title>模擬百佳網上超級市場</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/item.css">
@@ -47,25 +47,37 @@
 
   <div class="page">
     <div class="content">
-      <div class="title"><p><span class="name"></span><span class="desc"></span></p></div>
-      <div class="details">
-        <div class="image">
-          <img src="">
+      <div class="left">
+      </div>
+      <div class="right">
+        <div class="title">
+          <p><span class="name"></span><span class="desc"></span></p>
         </div>
-        <div class="info">
-          <p class="price"></p>
-          <div class="input">
-            <div class="minus">
-              <img src="./static/svg/minus.svg">
+        <div class="details">
+          <div class="image">
+            <img src="">
+          </div>
+          <div class="info">
+            <p class="price"></p>
+            <div class="input">
+              <div class="minus">
+                <img src="./static/svg/minus.svg">
+              </div>
+              <input type="number" id="quantity" value="1" min="1">
+              <div class="add">
+                <img src="./static/svg/add.svg">
+              </div>
             </div>
-            <input type="number" id="quantity" value="1" min="1" >
-            <div class="add">
-              <img src="./static/svg/add.svg">
+            <div class="confirm">
+              <p>新增至購物車</p>
+            </div>
+            <div class="mobile-left">
+              <img src="./static/svg/left-arrow.svg">
+              <p>回到上一頁</p>
             </div>
           </div>
-          <div class="confirm"><p>新增至購物車</p></div>
+          <div class="popups"></div>
         </div>
-        <div class="popups"></div>
       </div>
     </div>
   </div>
