@@ -59,6 +59,28 @@
   color: #214099;
 }
 
+.items .grids .not-found {
+  display: table;
+  margin: 5rem auto 4rem auto;
+}
+
+.items .grids .not-found .image {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.items .grids .not-found .image img {
+  width: 14rem;
+}
+
+.items .grids .not-found .desc {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #3fa7f3;
+}
+
 @media only screen and (max-width: 600px) {
   .subCatTitle p {
     font-size: 7.5vw;
@@ -68,6 +90,14 @@
   }
   .items .grids .item .title {
     font-size: 5vw;
+  }
+  .items .grids .not-found .image {
+    display: table;
+    margin: auto;
+    margin-bottom: 2rem;;
+  }
+  .items .grids .not-found .desc {
+    display: table;
   }
 }
 
@@ -80,5 +110,13 @@
   }
   .items .grids .item .title {
     font-size: 5vw;
+  }
+  .items .grids .not-found .image {
+    display: table;
+    margin: auto;
+    margin-bottom: 2rem;;
+  }
+  .items .grids .not-found .desc {
+    display: table;
   }
 }

@@ -4,6 +4,33 @@ var inMenu = false;
 var selectedCat = -1;
 
 $(document).ready(function () {
+  $(".search .bar input").on('keyup', function (e) {
+    if (e.keyCode === 13) {
+      let keyword = $(".search .bar input").val();
+      search(keyword);
+    }
+  });
+
+  $(".search-mobile .bar input").on('keyup', function (e) {
+    if (e.keyCode === 13) {
+      let keyword = $(".search-mobile .bar input").val();
+      search(keyword);
+    }
+  });
+
+  $(".search .bar .submit").click(function () {
+    let keyword = $(".search .bar input").val();
+    search(keyword);
+  });
+
+  $(".search-btn-mobile").click(function () {
+    $(".searchbar-mobile-container").css("display", "block");
+  });
+
+  $(".close").click(function () {
+    $(".searchbar-mobile-container").css("display", "none");
+  });
+
   d3.csv("./static/csv/categories.csv").then(function (array) {
     array.forEach(function (item) {
       $(".menu > .list").append(`
@@ -97,3 +124,9 @@ $(document).ready(function () {
     window.location.replace("./index.html");
   })
 })
+
+function search(keyword) {
+  if (keyword != "" && keyword != null) {
+    window.location.replace("./result.html?keyword=" + keyword);
+  }
+}

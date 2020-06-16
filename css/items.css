@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.subCatTitle p{
+.subCatTitle p {
   text-align: center;
   font-size: xx-large;
   font-weight: bolder;
@@ -16,7 +16,7 @@
 
 .items .prev {
   flex: 0 0 10%;
-  background:url(../static/svg/left-arrow.svg) center center no-repeat;
+  background: url(../static/svg/left-arrow.svg) center center no-repeat;
   background-size: 100%;
   /* fill: #dfdfdf; */
   filter: invert(94%) sepia(76%) saturate(135%) hue-rotate(295deg) brightness(110%) contrast(75%);
@@ -26,7 +26,7 @@
 
 .items .next {
   flex: 0 0 10%;
-  background:url(../static/svg/right-arrow.svg) center center no-repeat;
+  background: url(../static/svg/right-arrow.svg) center center no-repeat;
   background-size: 100%;
   /* fill: #dfdfdf; */
   filter: invert(94%) sepia(76%) saturate(135%) hue-rotate(295deg) brightness(110%) contrast(75%);
@@ -63,11 +63,9 @@
   .subCatTitle p {
     font-size: 7.5vw;
   }
-  
   .items .grids .item {
     flex: 0 0 calc(50% - 0.0625rem);
   }
-
   .items .grids .item .title {
     font-size: 5vw;
   }
@@ -77,11 +75,9 @@
   .subCatTitle p {
     font-size: 7.5vw;
   }
-  
   .items .grids .item {
     flex: 0 0 calc(50% - 0.0625rem);
   }
-
   .items .grids .item .title {
     font-size: 5vw;
   }
