@@ -4,19 +4,27 @@ var quantity;
 
 $(document).ready(function () {
   $(".page .left").click(function () {
-    window.history.back();
+    window.history.go(-1);
+  });
+
+  $(".page .details .info .mobile-left").click(function () {
+    window.history.go(-1);
   });
 
   $(".menu-btn img").hover(function () {
     $(".page .left").css("z-index", "-1");
+    $(".page .details .info .input").css("z-index", "-1");
   }, function () {
     $(".page .left").css("z-index", "0");
+    $(".page .details .info .input").css("z-index", "0");
   })
 
   $(".menu").hover(function () {
     $(".page .left").css("z-index", "-1");
+    $(".page .details .info .input").css("z-index", "-1");
   }, function () {
     $(".page .left").css("z-index", "0");
+    $(".page .details .info .input").css("z-index", "0");
   });  
 
   quantity = $(".page .details .info .input input").val();
@@ -81,7 +89,7 @@ $(document).ready(function () {
       });
     });
   } else {
-    window.location.replace("./index.html");
+    window.location.href = "./index.html";
   }
 });
 

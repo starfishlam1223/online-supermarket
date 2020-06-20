@@ -119,10 +119,10 @@
 117,香蕉,12,4,./static/png/items/117.png,LB
 118,奇異果,12,7,./static/png/items/118.png,EACH
 119,西瓜,12,26,./static/png/items/119.png,EACH
-120,藍梅,12,13,./static/png/items/120.png,125G
+120,藍莓,12,13,./static/png/items/120.png,125G
 121,士多啤梨,12,26,./static/png/items/121.png,250G
 122,菠蘿,12,21,./static/png/items/122.png,EACH
-123,哈蜜瓜,12,19,./static/png/items/123.png,EACH
+123,哈密瓜,12,19,./static/png/items/123.png,EACH
 124,牛油果,12,10,./static/png/items/124.png,EACH
 125,椰青,12,24,./static/png/items/125.png,EACH
 126,檸檬,12,5,./static/png/items/126.png,EACH
@@ -187,7 +187,7 @@
 185,蜂蜜,17,49,./static/png/items/185.png,454G
 186,草莓果醬,17,34,./static/png/items/186.png,370G
 187,杏脯果醬,17,34,./static/png/items/187.png,370G
-188,藍梅果醬,17,23,./static/png/items/188.png,225G
+188,藍莓果醬,17,23,./static/png/items/188.png,225G
 189,橙汁,18,18,./static/png/items/189.png,1L
 190,蘋果汁,18,11,./static/png/items/190.png,550ML
 191,活性乳酸菌飲品,18,12,./static/png/items/191.png,100ML×5
@@ -209,7 +209,7 @@
 207,3.6牛乳,20,31,./static/png/items/207.png,1L
 208,鮮豆漿,20,6,./static/png/items/208.png,236ML
 209,芒果乳酪,20,22,./static/png/items/209.png,150G
-210,藍梅乳酪,20,22,./static/png/items/210.png,150G
+210,藍莓乳酪,20,22,./static/png/items/210.png,150G
 211,蜜桃乳酪,20,22,./static/png/items/211.png,150G
 212,草莓乳酪,20,22,./static/png/items/212.png,150G
 213,希臘式純乳酪,20,87,./static/png/items/213.png,1KG

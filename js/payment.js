@@ -66,6 +66,6 @@ $(document).ready(function () {
   $(".info .pay").click(function () {
     localStorage.setItem("cart", "[]");
 
-    window.location.replace("./complete.html");
+    window.location.href = "./complete.html";
   })
 });

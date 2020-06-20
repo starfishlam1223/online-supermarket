@@ -5,10 +5,10 @@ var page = 1;
 $(document).ready(function () {
   d3.csv("./static/csv/items.csv").then(function (array) {
     $(".page .items .prev").click(function () {
-      window.location.replace("./index.html?page=" + (parseInt(page) - 1));
+      window.location.href = "./index.html?page=" + (parseInt(page) - 1);
     });
     $(".page .items .next").click(function () {
-      window.location.replace("./index.html?page=" + (parseInt(page) + 1));
+      window.location.href = "./index.html?page=" + (parseInt(page) + 1);
     });
 
     var useCurrentSuggest = false;
@@ -75,7 +75,7 @@ $(document).ready(function () {
         `);
 
         $(".page .items .grids .item[itemId=" + item.id + "]").click(function () {
-          window.location.replace("./item.html?item=" + item.id);
+          window.location.href = "./item.html?item=" + item.id;
         });
       }
     });

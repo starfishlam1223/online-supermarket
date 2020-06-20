@@ -1,21 +1,18 @@
 function searchInItems(array, keyword) {
-  console.log(array);
-  console.log(keyword);
   let result = [];
 
   array.forEach(element => {
     let distance = getEditDistance(element.name, keyword);
-    let similarity = element.name.length - distance;
+    let longerWord = Math.max(element.name.length, keyword.length)
+    let similarity = (longerWord - distance) + (longerWord - distance) / element.name.length;
 
     if (similarity > 0) {
       element["similarity"] = similarity;
       result.push(element);
-      console.log(element);
     }
   });
 
   result.sort(function(a, b){return b.similarity - a.similarity});
-  console.log(result);
 
   return result;
 }

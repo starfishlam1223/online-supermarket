@@ -12,10 +12,10 @@ $(document).ready(function () {
     $(".subCatTitle p").text("\"" + keyword + "\"的搜尋結果");
 
     $(".page .items .prev").click(function () {
-      window.location.replace("./result.html?keyword=" + keyword + "&page=" + (parseInt(page) - 1));
+      window.location.href = "./result.html?keyword=" + keyword + "&page=" + (parseInt(page) - 1);
     });
     $(".page .items .next").click(function () {
-      window.location.replace("./result.html?keyword=" + keyword + "&page=" + (parseInt(page) + 1));
+      window.location.href = "./result.html?keyword=" + keyword + "&page=" + (parseInt(page) + 1);
     });
 
     d3.csv("./static/csv/items.csv").then(function (array) {
@@ -58,13 +58,13 @@ $(document).ready(function () {
               `);
 
             $(".page .items .grids .item[itemId=" + item.id + "]").click(function () {
-              window.location.replace("./item.html?item=" + item.id);
+              window.location.href = "./item.html?item=" + item.id;
             });
           }
         });
       }
     });
   } else {
-    window.location.replace("./index.html");
+    window.location.href = "./index.html";
   }
 });
